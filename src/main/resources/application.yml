@@ -1,0 +1,18 @@
+opcua:
+  list:
+    -
+      endPointUrl: opc.tcp://10.25.12.154:49320
+      userName: Administrator
+      password: ENC(v2u24oisuAPjFPUTIG5iUA==)
+    -
+      endPointUrl: opc.tcp://10.25.12.137:49320
+
+jasypt:
+  encryptor:
+    password: pwkey
+
+spring:
+  influx:
+    url: http://10.25.12.136:8086
+    user: guest
+    password: password
