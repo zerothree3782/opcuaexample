@@ -22,8 +22,9 @@ public class InfluxService {
     @Async
     public void opcUaInsertList(List<UaMonitoredItem> uaMonitoredItemList, List<DataValue> dataValueList,String endPointUrl){
         try {
-            //influxDB.enableGzip();
-            //influxDB.setRetentionPolicy("autogen");
+            influxDB.enableGzip();
+            influxDB.setRetentionPolicy("autogen");
+
             BatchPoints batchPoints = BatchPoints.database("HHI_test_database")
                     .retentionPolicy("autogen").build();
 
